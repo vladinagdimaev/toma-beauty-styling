@@ -1,0 +1,11 @@
+{
+  "name": "toma-beauty-styling",
+  "private": true,
+  "scripts": {
+    "build:css": "tailwindcss -i ./theme/src/input.css -o ./theme/static/css/app.css --minify"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.13",
+    "tailwindcss": "^4.1.13"
+  }
+}
