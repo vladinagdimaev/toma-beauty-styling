@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+@source "../templates/**/*.html";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.wire {
+  border: 2px dashed rgb(163 163 163);
+  background: rgb(245 245 245);
+}
