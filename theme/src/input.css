@@ -14,3 +14,43 @@ body {
   border: 2px dashed rgb(163 163 163);
   background: rgb(245 245 245);
 }
+
+.legal-content {
+  color: rgb(64 64 64);
+  line-height: 1.9;
+}
+
+.legal-content h1 {
+  margin-bottom: 2rem;
+  font-size: 2.25rem;
+  line-height: 1.2;
+  font-weight: 700;
+  color: rgb(23 23 23);
+}
+
+.legal-content h2 {
+  margin-top: 2.25rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: rgb(23 23 23);
+}
+
+.legal-content p,
+.legal-content ul {
+  margin-top: 0.8rem;
+}
+
+.legal-content ul {
+  padding-right: 1.25rem;
+  list-style: disc;
+}
+
+.legal-content strong {
+  color: rgb(23 23 23);
+}
+
+.legal-content a {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
