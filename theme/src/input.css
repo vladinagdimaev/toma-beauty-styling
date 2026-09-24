@@ -72,29 +72,6 @@ button {
     linear-gradient(180deg, rgba(255, 250, 243, 0.72), rgba(248, 235, 219, 0.32));
 }
 
-.brand-hero::before,
-.brand-hero::after {
-  position: absolute;
-  z-index: 0;
-  width: 22rem;
-  height: 22rem;
-  border: 1px solid rgba(173, 123, 43, 0.24);
-  border-radius: 48% 52% 58% 42%;
-  content: "";
-  pointer-events: none;
-}
-
-.brand-hero::before {
-  top: -15rem;
-  right: -12rem;
-  transform: rotate(24deg);
-}
-
-.brand-hero::after {
-  bottom: -17rem;
-  left: -12rem;
-  transform: rotate(-18deg);
-}
 
 .brand-hero-inner {
   position: relative;
