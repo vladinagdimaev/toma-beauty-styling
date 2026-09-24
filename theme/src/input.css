@@ -56,7 +56,10 @@ button {
 }
 
 .brand-nav a {
-  color: #51483f;
+  color: #463d35;
+  font-size: 0.98rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
 }
 
 .brand-nav a:hover,
@@ -327,6 +330,8 @@ button {
   align-items: baseline;
   gap: 0.35rem;
   color: var(--toma-gold-dark);
+  direction: ltr;
+  unicode-bidi: isolate;
   line-height: 1;
   text-decoration: none;
 }
