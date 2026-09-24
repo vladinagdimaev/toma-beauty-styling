@@ -1,16 +1,16 @@
 {% extends "base.html" %}
-{% block title %}Toma Beauty & Styling — טיפולי יופי בחדרה{% endblock %}
+{% block title %}ToMa Beauty by Tamara Solomonov | טיפולי ריסים, גבות ואיפור קבוע בחדרה{% endblock %}
 {% block content %}
 <header class="sticky top-0 z-50 border-b border-neutral-200 bg-white/95 backdrop-blur">
   <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
-    <a href="#top" class="font-bold tracking-wide">ToMa Beauty & Styling</a>
+    <a href="#top" class="font-bold tracking-wide">ToMa Beauty by Tamara Solomonov</a>
     <nav class="hidden gap-6 text-sm md:flex">
       <a href="#services">טיפולים</a>
       <a href="#gallery">עבודות</a>
-      <a href="#about">על תומה</a>
+      <a href="#about">על תמרה</a>
       <a href="#contact">יצירת קשר</a>
     </nav>
-    <a href="#contact" class="border border-neutral-900 px-4 py-2 text-sm font-semibold">בואי נדבר</a>
+    <a href="https://wa.me/972544599524" class="border border-neutral-900 px-4 py-2 text-sm font-semibold">בואי נדבר</a>
   </div>
 </header>
 
@@ -22,7 +22,7 @@
         <h1 class="text-4xl font-bold leading-tight md:text-6xl">טיפולי ריסים, גבות ואיפור קבוע בגישה אישית, רגישה ומדויקת</h1>
         <p class="mt-5 max-w-xl text-lg leading-8 text-neutral-600">כל טיפול מתחיל בהקשבה. נבחר יחד את הכיוון שמתאים לך, בקצב נעים ועם תשומת לב לפרטים — כדי שתרגישי שטיפלו בך כמו שצריך.</p>
         <div class="mt-7 flex flex-wrap gap-3">
-          <a href="#contact" class="bg-neutral-900 px-6 py-3 font-semibold text-white">בואי נמצא את הטיפול שמתאים לך</a>
+          <a href="https://wa.me/972544599524" class="bg-neutral-900 px-6 py-3 font-semibold text-white">בואי נמצא את הטיפול שמתאים לך</a>
           <a href="#gallery" class="border border-neutral-900 px-6 py-3 font-semibold">לראות עבודות</a>
         </div>
       </div>
@@ -34,7 +34,7 @@
 
   <section class="border-b border-neutral-200 bg-neutral-50">
     <div class="mx-auto grid max-w-6xl gap-4 px-4 py-6 text-center text-sm md:grid-cols-3">
-      <div class="border border-neutral-200 bg-white p-4"><strong>יחס אישי</strong><br><span class="text-neutral-600">טיפול אחת על אחת, בלי לחץ ובלי פס ייצור</span></div>
+      <div class="border border-neutral-200 bg-white p-4"><strong>יחס אישי</strong><br><span class="text-neutral-600">טיפול אחת על אחת, בקצב אישי ובאווירה רגועה</span></div>
       <div class="border border-neutral-200 bg-white p-4"><strong>דיוק והקשבה</strong><br><span class="text-neutral-600">הטיפול נבחר ומותאם יחד איתך</span></div>
       <div class="border border-neutral-200 bg-white p-4"><strong>בחדרה</strong><br><span class="text-neutral-600">סלון ביתי, פרטי ובתיאום מראש</span></div>
     </div>
@@ -45,14 +45,14 @@
       <div class="mb-8 max-w-2xl">
         <p class="mb-2 text-sm font-semibold text-neutral-500">טיפולים</p>
         <h2 class="text-3xl font-bold md:text-4xl">מה אפשר לקבוע</h2>
-        <p class="mt-3 text-neutral-600">טיפולים אישיים לריסים, גבות ואיפור קבוע. פרטים מדויקים, מחירים והנחיות יתווספו לאחר סגירת התוכן.</p>
+        <p class="mt-3 text-neutral-600">טיפולים אישיים לריסים, גבות ואיפור קבוע, עם התאמה למה שמתאים לך ולמראה שאת מחפשת.</p>
       </div>
       <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
         {% set services = [
-          ('הרמת ריסים','מראה פתוח ומסודר יותר לריסים הטבעיים, תוך עבודה עדינה והתאמה אישית.'),
-          ('עיצוב והרמת גבות','עיצוב מוקפד שמכבד את מבנה הפנים ואת הסגנון האישי שלך.'),
-          ('מיקרובליידינג','טיפול מקצועי לעיצוב ומילוי מראה הגבות. כרגע מוצע גם במסגרת מבצעי היכרות נקודתיים.'),
-          ('איפור קבוע לשפתיים','טיפול להדגשת מראה השפתיים. פרטים מלאים יתווספו בהמשך.')
+          ('הרמת ריסים','הרמה ועיצוב של הריסים הטבעיים, בהתאמה למבנה העין ולמראה שאת אוהבת.'),
+          ('עיצוב והרמת גבות','עיצוב והרמת גבות בהתאמה למבנה הפנים ולסגנון האישי שלך.'),
+          ('איפור קבוע לגבות','מיקרופיגמנטציה ומיקרובליידינג לעיצוב והדגשת הגבות, בהתאם לטכניקה שמתאימה לך.'),
+          ('איפור קבוע לשפתיים','מיקרופיגמנטציה להדגשת גוון וצורת השפתיים, בהתאמה אישית.')
         ] %}
         {% for title, description in services %}
         <article class="border border-neutral-200 p-6">
@@ -82,19 +82,10 @@
     <div class="mx-auto grid max-w-6xl gap-8 px-4 py-14 md:grid-cols-2 md:items-center md:py-20">
       <div class="wire flex min-h-[360px] items-center justify-center p-6 text-center text-neutral-500"><div><div class="mb-2 text-xs font-bold">צילום אישי</div><p>צילום טבעי של תומה בסביבת העבודה</p></div></div>
       <div>
-        <p class="mb-2 text-sm font-semibold text-neutral-500">על תומה</p>
+        <p class="mb-2 text-sm font-semibold text-neutral-500">על תמרה</p>
         <h2 class="text-3xl font-bold md:text-4xl">מסירות, רגישות ואהבה למקצוע</h2>
-        <p class="mt-5 leading-8 text-neutral-600">תומה מגיעה מרקע יצירתי בעיצוב אופנה, וכיום מביאה את אותה תשומת לב לפרטים גם לעולם הביוטי. חשוב לה להכיר את מי שיושבת מולה, להקשיב למה שהיא רוצה ולתת טיפול אישי ומוקפד באווירה רגועה ופרטית.</p>
-        <p class="mt-4 leading-8 text-neutral-600">העסק נמצא בתחילת הדרך, ונבנה בהדרגה סביב עבודה מקצועית, יחס אישי ותוצאות שמרגישות נכונות ללקוחה.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="reviews" class="border-b border-neutral-200 bg-neutral-50">
-    <div class="mx-auto max-w-6xl px-4 py-14 md:py-20">
-      <div class="mb-8"><p class="mb-2 text-sm font-semibold text-neutral-500">המלצות</p><h2 class="text-3xl font-bold md:text-4xl">מה לקוחות אומרות</h2><p class="mt-3 text-neutral-600">נוסיף כאן המלצות אמיתיות ככל שנאסוף אותן.</p></div>
-      <div class="grid gap-4 md:grid-cols-3">
-        {% for i in range(3) %}<blockquote class="border border-neutral-200 bg-white p-6"><p class="text-neutral-500">[המלצה של לקוחה]</p><footer class="mt-4 text-sm font-semibold text-neutral-400">[שם פרטי]</footer></blockquote>{% endfor %}
+        <p class="mt-5 leading-8 text-neutral-600">תמרה מגיעה מרקע יצירתי בעיצוב אופנה, וכיום מביאה את אותה תשומת לב לפרטים גם לעולם הביוטי. חשוב לה להכיר את מי שיושבת מולה, להקשיב למה שהיא רוצה ולתת טיפול אישי ומוקפד באווירה רגועה ופרטית.</p>
+        <p class="mt-4 leading-8 text-neutral-600">כל טיפול נעשה מתוך מסירות, רגישות ואהבה למקצוע, עם דגש על התאמה אישית ותחושה נעימה לאורך הדרך.</p>
       </div>
     </div>
   </section>
@@ -104,8 +95,8 @@
       <p class="mb-2 text-sm font-semibold text-neutral-500">רוצה לבדוק מה מתאים לך?</p>
       <h2 class="text-3xl font-bold md:text-5xl">בואי נדבר ונמצא יחד את הטיפול שמתאים לך</h2>
       <p class="mx-auto mt-4 max-w-2xl leading-8 text-neutral-600">אפשר לשלוח הודעה ב-WhatsApp או להתקשר. נדבר על מה שאת מחפשת, נבדוק מה מתאים ונקבע מועד בנוחות.</p>
-      <div class="mt-8 flex flex-wrap justify-center gap-3"><a href="#" class="bg-neutral-900 px-6 py-3 font-semibold text-white">שלחי לי הודעה ב-WhatsApp</a><a href="#" class="border border-neutral-900 px-6 py-3 font-semibold">התקשרי אליי</a></div>
-      <div class="mt-8 text-sm text-neutral-600"><p>סלון ביתי בחדרה • בתיאום מראש</p><p class="mt-1">[טלפון] • [Instagram]</p></div>
+      <div class="mt-8 flex flex-wrap justify-center gap-3"><a href="https://wa.me/972544599524" class="bg-neutral-900 px-6 py-3 font-semibold text-white">שלחי לי הודעה ב WhatsApp</a><a href="tel:+972544599524" class="border border-neutral-900 px-6 py-3 font-semibold">התקשרי אליי</a></div>
+      <div class="mt-8 text-sm text-neutral-600"><p>טיפולים בחדרה • בתיאום מראש</p><p class="mt-1"><a href="tel:+972544599524" class="underline underline-offset-4">054 459 9524</a></p></div>
     </div>
   </section>
 </main>
@@ -123,5 +114,5 @@
     <p class="mt-5 text-xs text-neutral-500">האתר נוצר באהבה על ידי <a class="underline underline-offset-4" href="https://sensei.art" target="_blank" rel="noopener">sensei.art</a></p>
   </div>
 </footer>
-<div class="fixed bottom-4 left-4 right-4 z-40 md:hidden"><a href="#contact" class="block bg-neutral-900 px-5 py-4 text-center font-bold text-white shadow-lg">בואי נדבר</a></div>
+<div class="fixed bottom-4 left-4 right-4 z-40 md:hidden"><a href="https://wa.me/972544599524" class="block bg-neutral-900 px-5 py-4 text-center font-bold text-white shadow-lg">בואי נדבר</a></div>
 {% endblock %}
