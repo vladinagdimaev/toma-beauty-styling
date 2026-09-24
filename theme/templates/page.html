@@ -1,26 +1,36 @@
 {% extends "base.html" %}
 {% block title %}{{ page.title }} — {{ SITENAME }}{% endblock %}
 {% block content %}
-<header class="border-b border-neutral-200 bg-white">
-  <div class="mx-auto flex max-w-4xl items-center justify-between px-4 py-4">
-    <a href="{{ SITEURL }}/" class="font-bold tracking-wide">ToMa Beauty by Tamara Solomonov</a>
-    <a href="{{ SITEURL }}/" class="text-sm underline underline-offset-4">חזרה לאתר</a>
+<header class="brand-header border-b">
+  <div class="mx-auto flex max-w-4xl items-center justify-between gap-5 px-4 py-3">
+    <a href="{{ SITEURL }}/" aria-label="ToMa Beauty, חזרה לעמוד הבית">
+      <img
+        src="{{ SITEURL }}/theme/images/toma-logo-wordmark.webp"
+        alt="ToMa Beauty"
+        class="brand-logo"
+      >
+    </a>
+    <a href="{{ SITEURL }}/" class="brand-secondary-button px-4 py-2 text-sm font-semibold">חזרה לאתר</a>
   </div>
 </header>
+
 <main class="mx-auto max-w-4xl px-4 py-12 md:py-16">
-  <article class="legal-content">
+  <article class="legal-content border border-[rgba(173,123,43,0.34)] bg-[rgba(255,250,243,0.76)] p-6 shadow-[0_18px_45px_rgba(91,64,34,0.06)] md:p-10">
+    <p class="section-kicker mb-2">ToMa Beauty</p>
     <h1>{{ page.title }}</h1>
+    <div class="brand-rule mb-8"><span></span></div>
     {{ page.content }}
   </article>
 </main>
-<footer class="border-t border-neutral-200 bg-neutral-50">
-  <div class="mx-auto max-w-4xl px-4 py-8 text-sm text-neutral-600">
-    <div class="flex flex-wrap gap-4">
+
+<footer class="brand-footer">
+  <div class="mx-auto max-w-4xl px-4 py-8 text-sm">
+    <div class="flex flex-wrap gap-5">
       <a href="{{ SITEURL }}/privacy/">פרטיות</a>
       <a href="{{ SITEURL }}/accessibility/">נגישות</a>
       <a href="{{ SITEURL }}/">עמוד הבית</a>
     </div>
-    <p class="mt-5 text-xs text-neutral-500">האתר נוצר באהבה על ידי <a class="underline underline-offset-4" href="https://sensei.art" target="_blank" rel="noopener">sensei.art</a></p>
+    <p class="mt-5 text-xs text-[#a99c90]">האתר נוצר באהבה על ידי <a class="underline underline-offset-4" href="https://sensei.art" target="_blank" rel="noopener">sensei.art</a></p>
   </div>
 </footer>
 {% endblock %}
