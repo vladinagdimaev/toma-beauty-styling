@@ -3,16 +3,12 @@
 {% block content %}
 <header class="brand-header sticky top-0 z-50 border-b backdrop-blur">
   <div class="mx-auto flex max-w-6xl items-center justify-between gap-5 px-4 py-2.5">
-    <a href="#top" class="shrink-0" aria-label="ToMa Beauty, חזרה לראש העמוד">
-      <img
-        src="{{ SITEURL }}/theme/images/toma-logo-wordmark.webp"
-        alt="ToMa Beauty"
-        class="brand-logo"
-      >
+    <a href="#top" class="brand-wordmark shrink-0" aria-label="ToMa Beauty, חזרה לראש העמוד">
+      <span class="brand-wordmark-main">ToMa</span>
+      <span class="brand-wordmark-sub">Beauty</span>
     </a>
     <nav class="brand-nav hidden items-center gap-7 text-sm md:flex" aria-label="ניווט ראשי">
       <a href="#services">טיפולים</a>
-      <a href="#gallery">עבודות</a>
       <a href="#about">על תמרה</a>
       <a href="#contact">יצירת קשר</a>
     </nav>
@@ -29,7 +25,7 @@
         <p class="mt-6 text-lg leading-8 text-[#6f6359]">כל טיפול מתחיל בהקשבה. נבחר יחד את הכיוון שמתאים לך, בקצב נעים ועם תשומת לב לפרטים, כדי שתרגישי שטיפלו בך כמו שצריך.</p>
         <div class="mt-8 flex flex-wrap gap-3">
           <a href="https://wa.me/972544599524" class="brand-primary-button px-6 py-3 font-semibold">בואי נמצא את הטיפול שמתאים לך</a>
-          <a href="#gallery" class="brand-secondary-button px-6 py-3 font-semibold">לראות עבודות</a>
+          <a href="#services" class="brand-secondary-button px-6 py-3 font-semibold">לראות טיפולים</a>
         </div>
       </div>
       <div class="brand-image-frame">
@@ -118,38 +114,12 @@
     </div>
   </section>
 
-  <section id="gallery" class="border-b section-shell bg-[rgba(248,235,219,0.38)]">
-    <div class="mx-auto max-w-6xl px-4 py-16 md:py-24">
-      <div class="mx-auto mb-10 max-w-2xl text-center">
-        <p class="section-kicker mb-2">עבודות</p>
-        <h2 class="section-heading text-3xl font-bold md:text-4xl">עבודות ותוצאות</h2>
-        <p class="mt-4 leading-7 text-[#776a60]">כאן יוצגו עבודות אמיתיות של תמרה. נבחר מעט תמונות חזקות וברורות, כדי לתת לכל עבודה את המקום שלה.</p>
-        <div class="brand-rule mx-auto"><span></span></div>
-      </div>
-      <div class="mx-auto grid max-w-5xl gap-4 md:grid-cols-3">
-        {% for i in range(1,4) %}
-        <div class="gallery-placeholder flex aspect-[4/3] items-center justify-center p-5 text-center">
-          <div>
-            <p class="font-semibold text-[#4f463f]">עבודה {{ i }}</p>
-            <p class="mt-2 text-sm">תמונה אמיתית תתווסף כאן</p>
-          </div>
-        </div>
-        {% endfor %}
-      </div>
-    </div>
-  </section>
-
   <section id="about" class="border-b section-shell">
-    <div class="mx-auto grid max-w-6xl gap-10 px-4 py-16 md:grid-cols-2 md:items-center md:py-20">
-      <div class="about-placeholder mx-auto flex aspect-[4/3] w-full max-w-xl items-center justify-center p-8 text-center">
-        <div>
-          <p class="font-semibold text-[#4f463f]">צילום אישי של תמרה</p>
-          <p class="mt-2 text-sm">צילום טבעי בסביבת העבודה</p>
-        </div>
-      </div>
-      <div class="about-panel">
+    <div class="mx-auto max-w-4xl px-4 py-16 md:py-20">
+      <div class="about-panel mx-auto max-w-3xl text-center">
         <p class="section-kicker mb-2">על תמרה</p>
         <h2 class="section-heading text-3xl font-bold md:text-4xl">מסירות, רגישות ואהבה למקצוע</h2>
+        <div class="brand-rule mx-auto"><span></span></div>
         <p class="mt-6 leading-8 text-[#6f6359]">תמרה מגיעה מרקע יצירתי בעיצוב אופנה, וכיום מביאה את אותה תשומת לב לפרטים גם לעולם הביוטי. חשוב לה להכיר את מי שיושבת מולה, להקשיב למה שהיא רוצה ולתת טיפול אישי ומוקפד באווירה רגועה ופרטית.</p>
         <p class="mt-4 leading-8 text-[#6f6359]">כל טיפול נעשה מתוך מסירות, רגישות ואהבה למקצוע, עם דגש על התאמה אישית ותחושה נעימה לאורך הדרך.</p>
       </div>
