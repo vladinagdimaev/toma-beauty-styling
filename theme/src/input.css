@@ -52,7 +52,6 @@ button {
   display: block;
   width: auto;
   height: 3.4rem;
-  mix-blend-mode: multiply;
   background: transparent;
 }
 
@@ -343,4 +342,27 @@ button {
   .trust-item + .trust-item {
     border-top: 1px solid var(--toma-line);
   }
+}
+
+
+.brand-wordmark {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.35rem;
+  color: var(--toma-gold-dark);
+  line-height: 1;
+  text-decoration: none;
+}
+
+.brand-wordmark-main {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.9rem;
+  letter-spacing: -0.04em;
+}
+
+.brand-wordmark-sub {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.05rem;
+  font-style: italic;
+  letter-spacing: 0.02em;
 }
