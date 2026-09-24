@@ -44,7 +44,7 @@ button {
 
 .brand-header {
   border-color: var(--toma-line);
-  background: rgba(255, 250, 243, 0.94);
+  background: rgba(249, 235, 219, 0.96);
   box-shadow: 0 8px 30px rgba(74, 55, 34, 0.04);
 }
 
@@ -53,6 +53,7 @@ button {
   width: auto;
   height: 3.4rem;
   mix-blend-mode: multiply;
+  background: transparent;
 }
 
 .brand-nav a {
@@ -199,8 +200,8 @@ button {
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  width: min(17rem, 68vw);
-  margin-top: 1.2rem;
+  width: min(15rem, 62vw);
+  margin-top: 1.35rem;
 }
 
 .brand-rule::before,
@@ -259,9 +260,7 @@ button {
 }
 
 .about-panel {
-  border: 1px solid var(--toma-line);
-  background: rgba(255, 250, 243, 0.72);
-  padding: clamp(1.5rem, 3vw, 2.5rem);
+  padding: clamp(0.25rem, 1.5vw, 1rem);
 }
 
 .contact-panel {
@@ -271,25 +270,6 @@ button {
     radial-gradient(circle at 8% 0%, rgba(216, 187, 122, 0.16), transparent 15rem),
     rgba(255, 250, 243, 0.9);
   box-shadow: 0 22px 52px rgba(91, 64, 34, 0.09);
-}
-
-.contact-panel::before,
-.contact-panel::after {
-  position: absolute;
-  left: 50%;
-  width: min(13rem, 34%);
-  height: 1px;
-  background: var(--toma-line);
-  content: "";
-  transform: translateX(-50%);
-}
-
-.contact-panel::before {
-  top: 1.25rem;
-}
-
-.contact-panel::after {
-  bottom: 1.25rem;
 }
 
 .brand-footer {
