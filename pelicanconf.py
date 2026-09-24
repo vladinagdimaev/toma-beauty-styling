@@ -1,5 +1,5 @@
-AUTHOR = 'Toma'
-SITENAME = 'Toma Beauty Styling'
+AUTHOR = 'Tamara Solomonov'
+SITENAME = 'ToMa Beauty by Tamara Solomonov'
 SITEURL = ''
 PATH = 'content'
 TIMEZONE = 'Asia/Jerusalem'
