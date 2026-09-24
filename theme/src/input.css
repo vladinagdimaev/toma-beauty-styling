@@ -139,14 +139,14 @@ button {
 
 .brand-primary-button {
   border: 1px solid var(--toma-gold-dark);
-  background: linear-gradient(135deg, #a87322, #c99b4b);
+  background: linear-gradient(135deg, #8b5f1f, #986619);
   color: #fffaf3;
   box-shadow: 0 10px 22px rgba(139, 95, 31, 0.18);
 }
 
 .brand-primary-button:hover,
 .brand-primary-button:focus-visible {
-  background: linear-gradient(135deg, #986619, #bb8939);
+  background: linear-gradient(135deg, #744b15, #865718);
   box-shadow: 0 13px 28px rgba(139, 95, 31, 0.24);
   transform: translateY(-1px);
 }
