@@ -1,32 +1,38 @@
 {% extends "base.html" %}
 {% block title %}ToMa Beauty by Tamara Solomonov | טיפולי ריסים, גבות ואיפור קבוע בחדרה{% endblock %}
 {% block content %}
-<header class="sticky top-0 z-50 border-b border-neutral-200 bg-white/95 backdrop-blur">
-  <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
-    <a href="#top" class="font-bold tracking-wide">ToMa Beauty by Tamara Solomonov</a>
-    <nav class="hidden gap-6 text-sm md:flex">
+<header class="brand-header sticky top-0 z-50 border-b backdrop-blur">
+  <div class="mx-auto flex max-w-6xl items-center justify-between gap-5 px-4 py-2.5">
+    <a href="#top" class="shrink-0" aria-label="ToMa Beauty, חזרה לראש העמוד">
+      <img
+        src="{{ SITEURL }}/theme/images/toma-logo-wordmark.webp"
+        alt="ToMa Beauty"
+        class="brand-logo"
+      >
+    </a>
+    <nav class="brand-nav hidden items-center gap-7 text-sm md:flex" aria-label="ניווט ראשי">
       <a href="#services">טיפולים</a>
       <a href="#gallery">עבודות</a>
       <a href="#about">על תמרה</a>
       <a href="#contact">יצירת קשר</a>
     </nav>
-    <a href="https://wa.me/972544599524" class="border border-neutral-900 px-4 py-2 text-sm font-semibold">בואי נדבר</a>
+    <a href="https://wa.me/972544599524" class="brand-secondary-button shrink-0 px-4 py-2 text-sm font-semibold">בואי נדבר</a>
   </div>
 </header>
 
 <main id="top">
-  <section class="border-b border-neutral-200">
-    <div class="mx-auto grid max-w-6xl gap-10 px-4 py-12 md:grid-cols-2 md:items-center md:py-16 lg:gap-14 lg:py-20">
+  <section class="brand-hero border-b section-shell">
+    <div class="brand-hero-inner mx-auto grid max-w-6xl gap-10 px-4 py-12 md:grid-cols-2 md:items-center md:py-16 lg:gap-14 lg:py-20">
       <div class="max-w-xl">
-        <p class="mb-4 inline-block border border-neutral-300 px-3 py-1 text-sm font-semibold text-neutral-700">סלון ביתי בחדרה, בתיאום מראש</p>
-        <h1 class="text-4xl font-bold leading-[1.12] md:text-5xl lg:text-[3.5rem]">טיפולי ריסים, גבות ואיפור קבוע בגישה אישית, רגישה ומדויקת</h1>
-        <p class="mt-6 text-lg leading-8 text-neutral-600">כל טיפול מתחיל בהקשבה. נבחר יחד את הכיוון שמתאים לך, בקצב נעים ועם תשומת לב לפרטים, כדי שתרגישי שטיפלו בך כמו שצריך.</p>
-        <div class="mt-7 flex flex-wrap gap-3">
-          <a href="https://wa.me/972544599524" class="bg-neutral-900 px-6 py-3 font-semibold text-white">בואי נמצא את הטיפול שמתאים לך</a>
-          <a href="#gallery" class="border border-neutral-900 px-6 py-3 font-semibold">לראות עבודות</a>
+        <p class="brand-kicker mb-5">סלון ביתי בחדרה, בתיאום מראש</p>
+        <h1 class="brand-title text-4xl font-bold leading-[1.12] md:text-5xl lg:text-[3.5rem]">טיפולי ריסים, גבות ואיפור קבוע בגישה אישית, רגישה ומדויקת</h1>
+        <p class="mt-6 text-lg leading-8 text-[#6f6359]">כל טיפול מתחיל בהקשבה. נבחר יחד את הכיוון שמתאים לך, בקצב נעים ועם תשומת לב לפרטים, כדי שתרגישי שטיפלו בך כמו שצריך.</p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="https://wa.me/972544599524" class="brand-primary-button px-6 py-3 font-semibold">בואי נמצא את הטיפול שמתאים לך</a>
+          <a href="#gallery" class="brand-secondary-button px-6 py-3 font-semibold">לראות עבודות</a>
         </div>
       </div>
-      <div class="overflow-hidden bg-neutral-100">
+      <div class="brand-image-frame">
         <div class="aspect-[4/5] md:aspect-[4/3] lg:aspect-[5/4]">
           <img
             src="{{ SITEURL }}/theme/images/toma-hero-beauty-portrait.webp"
@@ -40,22 +46,32 @@
     </div>
   </section>
 
-  <section class="border-b border-neutral-200 bg-neutral-50">
-    <div class="mx-auto grid max-w-6xl gap-4 px-4 py-6 text-center text-sm md:grid-cols-3">
-      <div class="border border-neutral-200 bg-white p-4"><strong>יחס אישי</strong><br><span class="text-neutral-600">טיפול אחת על אחת, בקצב אישי ובאווירה רגועה</span></div>
-      <div class="border border-neutral-200 bg-white p-4"><strong>דיוק והקשבה</strong><br><span class="text-neutral-600">הטיפול נבחר ומותאם יחד איתך</span></div>
-      <div class="border border-neutral-200 bg-white p-4"><strong>בחדרה</strong><br><span class="text-neutral-600">סלון ביתי, פרטי ובתיאום מראש</span></div>
+  <section class="trust-strip">
+    <div class="mx-auto grid max-w-6xl px-4 text-center text-sm md:grid-cols-3">
+      <div class="trust-item">
+        <strong class="text-base">יחס אישי</strong>
+        <p class="mt-1 text-[#776a60]">טיפול אחת על אחת, בקצב אישי ובאווירה רגועה</p>
+      </div>
+      <div class="trust-item">
+        <strong class="text-base">דיוק והקשבה</strong>
+        <p class="mt-1 text-[#776a60]">הטיפול נבחר ומותאם יחד איתך</p>
+      </div>
+      <div class="trust-item">
+        <strong class="text-base">בחדרה</strong>
+        <p class="mt-1 text-[#776a60]">סלון ביתי, פרטי ובתיאום מראש</p>
+      </div>
     </div>
   </section>
 
-  <section id="services" class="border-b border-neutral-200">
-    <div class="mx-auto max-w-6xl px-4 py-14 md:py-20">
-      <div class="mb-8 max-w-2xl">
-        <p class="mb-2 text-sm font-semibold text-neutral-500">טיפולים</p>
-        <h2 class="text-3xl font-bold md:text-4xl">מה אפשר לקבוע</h2>
-        <p class="mt-3 text-neutral-600">טיפולים אישיים לריסים, גבות ואיפור קבוע, עם התאמה למה שמתאים לך ולמראה שאת מחפשת.</p>
+  <section id="services" class="border-b section-shell">
+    <div class="mx-auto max-w-6xl px-4 py-16 md:py-24">
+      <div class="mx-auto mb-10 max-w-2xl text-center">
+        <p class="section-kicker mb-2">טיפולים</p>
+        <h2 class="section-heading text-3xl font-bold md:text-4xl">מה אפשר לקבוע</h2>
+        <div class="brand-rule mx-auto"><span></span></div>
+        <p class="mt-5 leading-7 text-[#776a60]">טיפולים אישיים לריסים, גבות ואיפור קבוע, עם התאמה למה שמתאים לך ולמראה שאת מחפשת.</p>
       </div>
-      <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+      <div class="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
         {% set services = [
           (
             'הרמת ריסים',
@@ -83,70 +99,101 @@
           )
         ] %}
         {% for title, description, image, alt in services %}
-        <article class="border border-neutral-200 p-6">
+        <article class="service-card">
           <img
             src="{{ SITEURL }}/theme/images/{{ image }}"
             alt="{{ alt }}"
-            class="mb-5 aspect-[4/3] w-full object-cover"
+            class="aspect-[4/3] w-full object-cover"
             loading="lazy"
             decoding="async"
           >
-          <h3 class="text-xl font-bold">{{ title }}</h3>
-          <p class="mt-2 leading-7 text-neutral-600">{{ description }}</p>
+          <div class="p-6">
+            <p class="section-kicker mb-2">ToMa Beauty</p>
+            <h3 class="text-xl font-bold">{{ title }}</h3>
+            <p class="mt-3 leading-7 text-[#776a60]">{{ description }}</p>
+          </div>
         </article>
         {% endfor %}
       </div>
     </div>
   </section>
 
-  <section id="gallery" class="border-b border-neutral-200 bg-neutral-50">
-    <div class="mx-auto max-w-6xl px-4 py-14 md:py-20">
-      <div class="mb-8">
-        <p class="mb-2 text-sm font-semibold text-neutral-500">עבודות</p>
-        <h2 class="text-3xl font-bold md:text-4xl">עבודות ותוצאות</h2>
-        <p class="mt-3 max-w-2xl text-neutral-600">הגלריה תיבנה בהדרגה מעבודות אמיתיות. נעדיף מעט תמונות חזקות וברורות על פני גלריה גדולה ולא אחידה.</p>
+  <section id="gallery" class="border-b section-shell bg-[rgba(248,235,219,0.38)]">
+    <div class="mx-auto max-w-6xl px-4 py-16 md:py-24">
+      <div class="mx-auto mb-10 max-w-2xl text-center">
+        <p class="section-kicker mb-2">עבודות</p>
+        <h2 class="section-heading text-3xl font-bold md:text-4xl">עבודות ותוצאות</h2>
+        <div class="brand-rule mx-auto"><span></span></div>
+        <p class="mt-5 leading-7 text-[#776a60]">כאן יוצגו עבודות אמיתיות של תמרה. נבחר מעט תמונות חזקות וברורות, כדי לתת לכל עבודה את המקום שלה.</p>
       </div>
-      <div class="grid grid-cols-2 gap-3 md:grid-cols-3">
-        {% for i in range(1,7) %}<div class="wire flex aspect-square items-center justify-center p-4 text-center text-sm text-neutral-500">עבודה {{ i }}</div>{% endfor %}
-      </div>
-    </div>
-  </section>
-
-  <section id="about" class="border-b border-neutral-200">
-    <div class="mx-auto grid max-w-6xl gap-8 px-4 py-14 md:grid-cols-2 md:items-center md:py-20">
-      <div class="wire flex min-h-[360px] items-center justify-center p-6 text-center text-neutral-500"><div><div class="mb-2 text-xs font-bold">צילום אישי</div><p>צילום טבעי של תמרה בסביבת העבודה</p></div></div>
-      <div>
-        <p class="mb-2 text-sm font-semibold text-neutral-500">על תמרה</p>
-        <h2 class="text-3xl font-bold md:text-4xl">מסירות, רגישות ואהבה למקצוע</h2>
-        <p class="mt-5 leading-8 text-neutral-600">תמרה מגיעה מרקע יצירתי בעיצוב אופנה, וכיום מביאה את אותה תשומת לב לפרטים גם לעולם הביוטי. חשוב לה להכיר את מי שיושבת מולה, להקשיב למה שהיא רוצה ולתת טיפול אישי ומוקפד באווירה רגועה ופרטית.</p>
-        <p class="mt-4 leading-8 text-neutral-600">כל טיפול נעשה מתוך מסירות, רגישות ואהבה למקצוע, עם דגש על התאמה אישית ותחושה נעימה לאורך הדרך.</p>
+      <div class="grid gap-4 md:grid-cols-3">
+        {% for i in range(1,4) %}
+        <div class="gallery-placeholder flex aspect-[4/5] items-center justify-center p-6 text-center">
+          <div>
+            <p class="font-semibold text-[#4f463f]">עבודה {{ i }}</p>
+            <p class="mt-2 text-sm">תמונה אמיתית תתווסף כאן</p>
+          </div>
+        </div>
+        {% endfor %}
       </div>
     </div>
   </section>
 
-  <section id="contact" class="border-b border-neutral-200">
-    <div class="mx-auto max-w-4xl px-4 py-16 text-center md:py-24">
-      <p class="mb-2 text-sm font-semibold text-neutral-500">רוצה לבדוק מה מתאים לך?</p>
-      <h2 class="text-3xl font-bold md:text-5xl">בואי נדבר ונמצא מה מתאים לך</h2>
-      <p class="mx-auto mt-4 max-w-2xl leading-8 text-neutral-600">אפשר לשלוח הודעה ב WhatsApp או להתקשר. נדבר על מה שאת מחפשת ונקבע מועד שמתאים לך.</p>
-      <div class="mt-8 flex flex-wrap justify-center gap-3"><a href="https://wa.me/972544599524" class="bg-neutral-900 px-6 py-3 font-semibold text-white">שלחי לי הודעה ב WhatsApp</a><a href="tel:+972544599524" class="border border-neutral-900 px-6 py-3 font-semibold">התקשרי אליי</a></div>
-      <div class="mt-8 text-sm text-neutral-600"><p>טיפולים בחדרה, בתיאום מראש</p><p class="mt-1"><a href="tel:+972544599524" class="underline underline-offset-4"><span dir="ltr" class="inline-block">054-4599524</span></a></p></div>
+  <section id="about" class="border-b section-shell">
+    <div class="mx-auto grid max-w-6xl gap-8 px-4 py-16 md:grid-cols-2 md:items-center md:py-24">
+      <div class="about-placeholder flex min-h-[390px] items-center justify-center p-8 text-center">
+        <div>
+          <p class="font-semibold text-[#4f463f]">צילום אישי של תמרה</p>
+          <p class="mt-2 text-sm">צילום טבעי בסביבת העבודה</p>
+        </div>
+      </div>
+      <div class="about-panel">
+        <p class="section-kicker mb-2">על תמרה</p>
+        <h2 class="section-heading text-3xl font-bold md:text-4xl">מסירות, רגישות ואהבה למקצוע</h2>
+        <div class="brand-rule"><span></span></div>
+        <p class="mt-6 leading-8 text-[#6f6359]">תמרה מגיעה מרקע יצירתי בעיצוב אופנה, וכיום מביאה את אותה תשומת לב לפרטים גם לעולם הביוטי. חשוב לה להכיר את מי שיושבת מולה, להקשיב למה שהיא רוצה ולתת טיפול אישי ומוקפד באווירה רגועה ופרטית.</p>
+        <p class="mt-4 leading-8 text-[#6f6359]">כל טיפול נעשה מתוך מסירות, רגישות ואהבה למקצוע, עם דגש על התאמה אישית ותחושה נעימה לאורך הדרך.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="px-4 py-16 md:py-24">
+    <div class="contact-panel mx-auto max-w-4xl px-6 py-14 text-center md:px-12 md:py-16">
+      <p class="section-kicker mb-2">רוצה לבדוק מה מתאים לך?</p>
+      <h2 class="section-heading text-3xl font-bold md:text-5xl">בואי נדבר ונמצא מה מתאים לך</h2>
+      <div class="brand-rule mx-auto"><span></span></div>
+      <p class="mx-auto mt-5 max-w-2xl leading-8 text-[#6f6359]">אפשר לשלוח הודעה ב WhatsApp או להתקשר. נדבר על מה שאת מחפשת ונקבע מועד שמתאים לך.</p>
+      <div class="mt-8 flex flex-wrap justify-center gap-3">
+        <a href="https://wa.me/972544599524" class="brand-primary-button px-6 py-3 font-semibold">שלחי לי הודעה ב WhatsApp</a>
+        <a href="tel:+972544599524" class="brand-secondary-button px-6 py-3 font-semibold">התקשרי אליי</a>
+      </div>
+      <div class="mt-8 text-sm text-[#776a60]">
+        <p>טיפולים בחדרה, בתיאום מראש</p>
+        <p class="mt-2">
+          <a href="tel:+972544599524" class="font-semibold text-[#8b5f1f] underline decoration-[#d8bb7a] underline-offset-4">
+            <span dir="ltr" class="inline-block">054-4599524</span>
+          </a>
+        </p>
+      </div>
     </div>
   </section>
 </main>
 
-<footer class="bg-neutral-900 text-neutral-300">
-  <div class="mx-auto max-w-6xl px-4 py-8 text-sm">
+<footer class="brand-footer">
+  <div class="mx-auto max-w-6xl px-4 py-9 text-sm">
     <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
       <p>© ToMa Beauty by Tamara Solomonov</p>
-      <div class="flex flex-wrap gap-4">
+      <div class="flex flex-wrap gap-5">
         <a href="{{ SITEURL }}/privacy/">פרטיות</a>
         <a href="{{ SITEURL }}/accessibility/">נגישות</a>
         <a href="#contact">יצירת קשר</a>
       </div>
     </div>
-    <p class="mt-5 text-xs text-neutral-500">האתר נוצר באהבה על ידי <a class="underline underline-offset-4" href="https://sensei.art" target="_blank" rel="noopener">sensei.art</a></p>
+    <p class="mt-5 text-xs text-[#a99c90]">האתר נוצר באהבה על ידי <a class="underline underline-offset-4" href="https://sensei.art" target="_blank" rel="noopener">sensei.art</a></p>
   </div>
 </footer>
-<div class="fixed bottom-4 left-4 right-4 z-40 md:hidden"><a href="https://wa.me/972544599524" class="block bg-neutral-900 px-5 py-4 text-center font-bold text-white shadow-lg">בואי נדבר</a></div>
+
+<div class="fixed bottom-4 left-4 right-4 z-40 md:hidden">
+  <a href="https://wa.me/972544599524" class="brand-primary-button block px-5 py-4 text-center font-bold shadow-lg">בואי נדבר</a>
+</div>
 {% endblock %}
