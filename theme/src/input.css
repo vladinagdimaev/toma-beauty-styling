@@ -348,3 +348,99 @@ button {
   font-style: italic;
   letter-spacing: 0.02em;
 }
+
+
+[id] {
+  scroll-margin-top: 5rem;
+}
+
+.pricing-section,
+.training-section,
+.faq-section {
+  background: rgba(255, 250, 243, 0.42);
+}
+
+.price-card {
+  border: 1px solid var(--toma-line);
+  background: rgba(255, 250, 243, 0.86);
+  padding: 1.5rem;
+  box-shadow: 0 16px 34px rgba(91, 64, 34, 0.06);
+}
+
+.price-card-featured {
+  border-color: rgba(139, 95, 31, 0.58);
+  background:
+    radial-gradient(circle at 100% 0%, rgba(216, 187, 122, 0.16), transparent 14rem),
+    rgba(255, 250, 243, 0.94);
+}
+
+.price-main {
+  color: var(--toma-gold-dark);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2rem, 4vw, 2.7rem);
+  font-weight: 700;
+  line-height: 1;
+}
+
+.price-future {
+  border-top: 1px solid var(--toma-line);
+  padding-top: 1rem;
+  color: #5b5148;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.price-breakdown {
+  display: grid;
+  gap: 0.45rem;
+  color: #5b5148;
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+.training-card {
+  border: 1px solid var(--toma-line);
+  background: rgba(255, 250, 243, 0.78);
+  padding: 1.25rem 1.35rem;
+}
+
+.faq-item {
+  border: 1px solid var(--toma-line);
+  background: rgba(255, 250, 243, 0.78);
+}
+
+.faq-item summary {
+  position: relative;
+  cursor: pointer;
+  padding: 1.1rem 3rem 1.1rem 1.25rem;
+  color: var(--toma-ink);
+  font-weight: 700;
+  list-style: none;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::before {
+  position: absolute;
+  top: 50%;
+  right: 1.2rem;
+  color: var(--toma-gold-dark);
+  content: "+";
+  font-size: 1.35rem;
+  font-weight: 400;
+  transform: translateY(-52%);
+}
+
+.faq-item[open] summary::before {
+  content: "−";
+}
+
+.faq-item p {
+  border-top: 1px solid rgba(173, 123, 43, 0.24);
+  margin: 0;
+  padding: 1rem 1.25rem 1.2rem;
+  color: var(--toma-muted);
+  line-height: 1.8;
+}
