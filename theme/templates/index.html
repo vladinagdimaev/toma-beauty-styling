@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% block title %}ToMa Beauty by Tamara Solomonov | טיפולי ריסים, גבות ואיפור קבוע בחדרה{% endblock %}
+{% block title %}ToMa Beauty by Tamara Solomonov | ריסים, גבות ואיפור קבוע בחדרה{% endblock %}
 {% block content %}
 <header class="brand-header sticky top-0 z-50 border-b backdrop-blur">
   <div class="mx-auto flex max-w-6xl items-center justify-between gap-5 px-4 py-2.5">
@@ -7,10 +7,11 @@
       <span class="brand-wordmark-main">ToMa</span>
       <span class="brand-wordmark-sub">Beauty</span>
     </a>
-    <nav class="brand-nav hidden items-center gap-8 md:flex" aria-label="ניווט ראשי">
+    <nav class="brand-nav hidden items-center gap-7 md:flex" aria-label="ניווט ראשי">
       <a href="#services">טיפולים</a>
-      <a href="#about">על תמרה</a>
-      <a href="#contact">יצירת קשר</a>
+      <a href="#pricing">מחירים</a>
+      <a href="#training">הכשרות</a>
+      <a href="#faq">שאלות</a>
     </nav>
     <a href="https://wa.me/972544599524" class="brand-secondary-button shrink-0 px-4 py-2 text-sm font-semibold">בואי נדבר</a>
   </div>
@@ -20,9 +21,9 @@
   <section class="brand-hero border-b section-shell">
     <div class="brand-hero-inner mx-auto grid max-w-6xl gap-10 px-4 py-12 md:grid-cols-2 md:items-center md:py-16 lg:gap-14 lg:py-20">
       <div class="max-w-xl">
-        <p class="brand-kicker mb-5">סלון ביתי בחדרה, בתיאום מראש</p>
+        <p class="brand-kicker mb-5">סלון ביתי במרכז העיר חדרה, בתיאום מראש</p>
         <h1 class="brand-title text-4xl font-bold leading-[1.12] md:text-5xl lg:text-[3.5rem]">טיפולי ריסים, גבות ואיפור קבוע בגישה אישית, רגישה ומדויקת</h1>
-        <p class="mt-6 text-lg leading-8 text-[#6f6359]">כל טיפול מתחיל בהקשבה. נבחר יחד את הכיוון שמתאים לך, בקצב נעים ועם תשומת לב לפרטים, כדי שתרגישי שטיפלו בך כמו שצריך.</p>
+        <p class="mt-6 text-lg leading-8 text-[#6f6359]">כל טיפול מתחיל בהקשבה. נבחר יחד את הכיוון שמתאים לך, לפי המראה שאת רוצה ועם תשומת לב לפרטים.</p>
         <div class="mt-8">
           <a href="https://wa.me/972544599524" class="brand-primary-button inline-block px-6 py-3 font-semibold">בואי נמצא את הטיפול שמתאים לך</a>
         </div>
@@ -45,15 +46,15 @@
     <div class="mx-auto grid max-w-6xl px-4 text-center text-sm md:grid-cols-3">
       <div class="trust-item">
         <strong class="text-base">יחס אישי</strong>
-        <p class="mt-1 text-[#776a60]">טיפול אחת על אחת, בקצב אישי ובאווירה רגועה</p>
+        <p class="mt-1 text-[#776a60]">טיפול אחת על אחת, באווירה רגועה ופרטית</p>
       </div>
       <div class="trust-item">
-        <strong class="text-base">דיוק והקשבה</strong>
-        <p class="mt-1 text-[#776a60]">הטיפול נבחר ומותאם יחד איתך</p>
+        <strong class="text-base">התאמה אישית</strong>
+        <p class="mt-1 text-[#776a60]">לפי מבנה הפנים, הנתונים הטבעיים והמראה שאת רוצה</p>
       </div>
       <div class="trust-item">
-        <strong class="text-base">בחדרה</strong>
-        <p class="mt-1 text-[#776a60]">סלון ביתי, פרטי ובתיאום מראש</p>
+        <strong class="text-base">מרכז העיר חדרה</strong>
+        <p class="mt-1 text-[#776a60]">רחוב הלל יפה, בתיאום מראש</p>
       </div>
     </div>
   </section>
@@ -63,51 +64,86 @@
       <div class="mx-auto mb-10 max-w-2xl text-center">
         <p class="section-kicker mb-2">טיפולים</p>
         <h2 class="section-heading text-3xl font-bold md:text-4xl">מה אפשר לקבוע</h2>
-        <p class="mt-4 leading-7 text-[#776a60]">טיפולים אישיים לריסים, גבות ואיפור קבוע, עם התאמה למה שמתאים לך ולמראה שאת מחפשת.</p>
+        <p class="mt-4 leading-7 text-[#776a60]">ארבעה תחומי טיפול, עם התאמה למראה שאת מחפשת ולנתונים הטבעיים שלך.</p>
         <div class="brand-rule mx-auto"><span></span></div>
       </div>
+
       <div class="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
-        {% set services = [
-          (
-            'הרמת ריסים',
-            'הרמה ועיצוב של הריסים הטבעיים, בהתאמה למבנה העין ולמראה שאת אוהבת.',
-            'service-lash-lift.webp',
-            'תמונת אווירה של ריסים מורמים'
-          ),
-          (
-            'עיצוב והרמת גבות',
-            'עיצוב והרמת גבות בהתאמה למבנה הפנים ולסגנון האישי שלך.',
-            'toma-hero-beauty-portrait.webp',
-            'תמונת אווירה של גבות מעוצבות'
-          ),
-          (
-            'איפור קבוע לגבות',
-            'מיקרופיגמנטציה ומיקרובליידינג לעיצוב והדגשת הגבות, בהתאם לטכניקה שמתאימה לך.',
-            'service-permanent-brows.webp',
-            'תמונת אווירה של גבות מודגשות'
-          ),
-          (
-            'איפור קבוע לשפתיים',
-            'מיקרופיגמנטציה להדגשת גוון וצורת השפתיים, בהתאמה אישית.',
-            'service-permanent-lips.webp',
-            'תמונת אווירה של שפתיים בגוון טבעי'
-          )
-        ] %}
-        {% for title, description, image, alt in services %}
         <article class="service-card">
-          <img
-            src="{{ SITEURL }}/theme/images/{{ image }}"
-            alt="{{ alt }}"
-            class="aspect-[4/3] w-full object-cover"
-            loading="lazy"
-            decoding="async"
-          >
+          <img src="{{ SITEURL }}/theme/images/service-lash-lift.webp" alt="תמונת אווירה של ריסים מורמים" class="aspect-[4/3] w-full object-cover" loading="lazy" decoding="async">
           <div class="p-6">
-            <h3 class="text-xl font-bold">{{ title }}</h3>
-            <p class="mt-3 leading-7 text-[#776a60]">{{ description }}</p>
+            <h3 class="text-xl font-bold">הרמת ריסים</h3>
+            <p class="mt-3 leading-7 text-[#776a60]">הרמה ועיצוב של הריסים הטבעיים, בהתאמה למבנה העין ולמראה שאת אוהבת.</p>
           </div>
         </article>
-        {% endfor %}
+
+        <article class="service-card">
+          <img src="{{ SITEURL }}/theme/images/toma-hero-beauty-portrait.webp" alt="תמונת אווירה של גבות מעוצבות" class="aspect-[4/3] w-full object-cover" loading="lazy" decoding="async">
+          <div class="p-6">
+            <h3 class="text-xl font-bold">הרמת גבות</h3>
+            <p class="mt-3 leading-7 text-[#776a60]">הרמה ועיצוב של הגבות בהתאמה למבנה הפנים, לגבה הטבעית ולסגנון שאת מחפשת.</p>
+          </div>
+        </article>
+
+        <article class="service-card">
+          <img src="{{ SITEURL }}/theme/images/service-permanent-brows.webp" alt="תמונת אווירה של גבות מודגשות" class="aspect-[4/3] w-full object-cover" loading="lazy" decoding="async">
+          <div class="p-6">
+            <h3 class="text-xl font-bold">מיקרופיגמנטציה לגבות</h3>
+            <p class="mt-3 leading-7 text-[#776a60]">מיקרובליידינג בשיטת השערה, שיטת הפודרה או שיטה משולבת. הבחירה נעשית לפי מבנה הפנים, מבנה הגבות הטבעי והציפיות שלך.</p>
+          </div>
+        </article>
+
+        <article class="service-card">
+          <img src="{{ SITEURL }}/theme/images/service-permanent-lips.webp" alt="תמונת אווירה של שפתיים בגוון טבעי" class="aspect-[4/3] w-full object-cover" loading="lazy" decoding="async">
+          <div class="p-6">
+            <h3 class="text-xl font-bold">מיקרופיגמנטציה לשפתיים</h3>
+            <p class="mt-3 leading-7 text-[#776a60]">שיטת טינט למראה עדין וטבעי שנותן לשפתיים מעט צבע, או שיטת אודם למראה מודגש יותר שחוסך את הצורך באיפור יומיומי.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing" class="pricing-section border-b section-shell">
+    <div class="mx-auto max-w-6xl px-4 py-16 md:py-24">
+      <div class="mx-auto mb-10 max-w-2xl text-center">
+        <p class="section-kicker mb-2">מחירי היכרות</p>
+        <h2 class="section-heading text-3xl font-bold md:text-4xl">מחירים ברורים מראש</h2>
+        <p class="mt-4 leading-7 text-[#776a60]">המחירים הנוכחיים הם מחירי היכרות. במיקרופיגמנטציה הם מוצעים במסגרת הרחבת תיק העבודות.</p>
+        <div class="brand-rule mx-auto"><span></span></div>
+      </div>
+
+      <div class="grid gap-5 md:grid-cols-3">
+        <article class="price-card">
+          <p class="section-kicker">הרמת ריסים</p>
+          <p class="price-main mt-3">150 ₪</p>
+          <p class="mt-2 text-sm text-[#776a60]">מחיר היכרות</p>
+          <p class="price-future mt-5">מחיר מתוכנן בהמשך: 250 ₪</p>
+        </article>
+
+        <article class="price-card">
+          <p class="section-kicker">הרמת גבות</p>
+          <p class="price-main mt-3">150 ₪</p>
+          <p class="mt-2 text-sm text-[#776a60]">מחיר היכרות</p>
+          <p class="price-future mt-5">מחיר מתוכנן בהמשך: 250 ₪</p>
+        </article>
+
+        <article class="price-card price-card-featured">
+          <p class="section-kicker">איפור קבוע לגבות או לשפתיים</p>
+          <p class="price-main mt-3">עד 700 ₪</p>
+          <p class="mt-2 text-sm text-[#776a60]">מחיר היכרות במסגרת הרחבת תיק העבודות</p>
+          <div class="price-breakdown mt-5">
+            <p><strong>500 ₪</strong> לטיפול הראשון</p>
+            <p><strong>200 ₪</strong> לטיפול נוסף, אם יהיה צורך לאחר החלמה מלאה והתייצבות התוצאה</p>
+          </div>
+          <p class="price-future mt-5">מחיר החבילה המתוכנן בהמשך: 1,600 ₪</p>
+          <p class="mt-3 text-sm leading-6 text-[#776a60]">לקביעת הטיפול הראשון נגבית מקדמה של 100 ₪ שמתקזזת ממחיר הטיפול.</p>
+        </article>
+      </div>
+
+      <div class="pricing-notes mx-auto mt-8 max-w-3xl text-center text-sm leading-7 text-[#776a60]">
+        <p>כל המחירים כוללים את חומרי הטיפול.</p>
+        <p>אפשר לשלם במזומן, Bit, PayBox או בהעברה בנקאית.</p>
       </div>
     </div>
   </section>
@@ -116,10 +152,81 @@
     <div class="mx-auto max-w-4xl px-4 py-16 md:py-20">
       <div class="about-panel mx-auto max-w-3xl text-center">
         <p class="section-kicker mb-2">על תמרה</p>
-        <h2 class="section-heading text-3xl font-bold md:text-4xl">מסירות, רגישות ואהבה למקצוע</h2>
+        <h2 class="section-heading text-3xl font-bold md:text-4xl">דיוק, הקשבה והתאמה אישית</h2>
         <div class="brand-rule mx-auto"><span></span></div>
-        <p class="mt-6 leading-8 text-[#6f6359]">תמרה מגיעה מרקע יצירתי בעיצוב אופנה, וכיום מביאה את אותה תשומת לב לפרטים גם לעולם הביוטי. חשוב לה להכיר את מי שיושבת מולה, להקשיב למה שהיא רוצה ולתת טיפול אישי ומוקפד באווירה רגועה ופרטית.</p>
-        <p class="mt-4 leading-8 text-[#6f6359]">כל טיפול נעשה מתוך מסירות, רגישות ואהבה למקצוע, עם דגש על התאמה אישית ותחושה נעימה לאורך הדרך.</p>
+        <p class="mt-6 leading-8 text-[#6f6359]">עולם האסתטיקה והיופי תמיד משך את תמרה, במיוחד החיבור שבין טיפול לבין חשיבה עיצובית ודיוק בפרטים.</p>
+        <p class="mt-4 leading-8 text-[#6f6359]">בכל טיפול היא שואפת להבין מה הלקוחה רוצה, להתייחס למבנה הפנים ולנתונים הטבעיים ולכוון לתוצאה מחמיאה, טבעית ומודגשת במידה. חשוב לה שהטיפול ירגיש אישי, רגוע ופרטי, ושגם התוצאה וגם החוויה ירגישו נכונות ללקוחה.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="training" class="training-section border-b section-shell">
+    <div class="mx-auto max-w-5xl px-4 py-16 md:py-20">
+      <div class="mx-auto mb-9 max-w-2xl text-center">
+        <p class="section-kicker mb-2">הכשרות</p>
+        <h2 class="section-heading text-3xl font-bold md:text-4xl">הכשרות מקצועיות</h2>
+        <p class="mt-4 leading-7 text-[#776a60]">תמרה עברה הכשרות בתחומי הריסים, הגבות והמיקרופיגמנטציה וממשיכה לצבור ניסיון מעשי בתחום.</p>
+        <div class="brand-rule mx-auto"><span></span></div>
+      </div>
+      <div class="grid gap-4 sm:grid-cols-2">
+        <div class="training-card">
+          <h3 class="font-bold">הרמת ריסים</h3>
+          <p class="mt-2 text-sm leading-6 text-[#776a60]">הכשרה מקצועית בטיפול והרמת ריסים.</p>
+        </div>
+        <div class="training-card">
+          <h3 class="font-bold">הרמת גבות</h3>
+          <p class="mt-2 text-sm leading-6 text-[#776a60]">הכשרה מקצועית בהרמת גבות.</p>
+        </div>
+        <div class="training-card">
+          <h3 class="font-bold" dir="ltr">Micropigmentation Basic Course</h3>
+          <p class="mt-2 text-sm leading-6 text-[#776a60]">הכשרת איפור קבוע ומיקרופיגמנטציה ב Anat Lipkin Academy.</p>
+        </div>
+        <div class="training-card">
+          <h3 class="font-bold" dir="ltr">All About Lips</h3>
+          <p class="mt-2 text-sm leading-6 text-[#776a60]">הכשרה באיפור קבוע לשפתיים ב Anat Lipkin Academy.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" class="faq-section border-b section-shell">
+    <div class="mx-auto max-w-4xl px-4 py-16 md:py-20">
+      <div class="mx-auto mb-9 max-w-2xl text-center">
+        <p class="section-kicker mb-2">שאלות נפוצות</p>
+        <h2 class="section-heading text-3xl font-bold md:text-4xl">לפני שקובעים טיפול</h2>
+        <div class="brand-rule mx-auto"><span></span></div>
+      </div>
+
+      <div class="space-y-3">
+        <details class="faq-item">
+          <summary>איך יודעים איזו שיטת גבות מתאימה לי?</summary>
+          <p>הבחירה נעשית לפי מבנה הפנים, מבנה הגבות הטבעי, המצב הקיים והציפיות שלך. במיקרופיגמנטציה אפשר לבחור בין מיקרובליידינג בשיטת השערה, פודרה ושיטה משולבת.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>מה ההבדל בין טינט לשיטת אודם בשפתיים?</summary>
+          <p>טינט מתאים למי שרוצה תוספת צבע עדינה וטבעית בלי מראה של אודם. שיטת אודם מיועדת למראה מודגש יותר ולמי שרוצה לצמצם את הצורך באיפור השפתיים ביום יום.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>כמה זמן נמשך טיפול איפור קבוע?</summary>
+          <p>כדאי לפנות בערך 3 עד 4 שעות לטיפול. הזמן כולל גם מדידה, שרטוט ותכנון לפני שמתחילים את העבודה עצמה.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>יש לי כבר איפור קבוע. אפשר לעשות טיפול חדש?</summary>
+          <p>לפני שקובעים, תמרה צריכה לראות את האזור. לפעמים אפשר לעבוד על איפור קודם שכבר דהה, ובמקרים אחרים צריך לטפל באיפור הקודם לפני שאפשר להתקדם.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>האם תמיד צריך טיפול נוסף באיפור קבוע?</summary>
+          <p>לא בהכרח. בודקים את התוצאה רק לאחר החלמה מלאה והתייצבות שלה. אם יהיה צורך בטיפול נוסף, מחירו במסגרת מחיר ההיכרות הוא 200 ₪.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>איך קובעים תור לאיפור קבוע?</summary>
+          <p>פונים ב-WhatsApp ושולחים תמונה של האזור הרלוונטי. לאחר בדיקה ותיאום, הטיפול הראשון נשמר באמצעות מקדמה של 100 ₪ שמתקזזת ממחיר הטיפול. אם צריך לשנות את המועד, המקדמה נשמרת למועד החדש. במקרה של אי הגעה ללא הודעה, המקדמה אינה מוחזרת.</p>
+        </details>
       </div>
     </div>
   </section>
@@ -128,14 +235,15 @@
     <div class="contact-panel mx-auto max-w-4xl px-6 py-10 text-center md:px-10 md:py-12">
       <p class="section-kicker mb-2">רוצה לבדוק מה מתאים לך?</p>
       <h2 class="section-heading text-3xl font-bold md:text-5xl">בואי נדבר ונמצא מה מתאים לך</h2>
-      <p class="mx-auto mt-4 max-w-2xl leading-8 text-[#6f6359]">אפשר לשלוח הודעה ב-WhatsApp או להתקשר. נדבר על מה שאת מחפשת ונקבע מועד שמתאים לך.</p>
+      <p class="mx-auto mt-4 max-w-2xl leading-8 text-[#6f6359]">אפשר לשלוח הודעה ב-WhatsApp או להתקשר. אם את מתעניינת באיפור קבוע, אפשר לצרף תמונה של האזור כדי שתמרה תוכל להבין מה מתאים לפני קביעת הטיפול.</p>
       <div class="brand-rule mx-auto"><span></span></div>
       <div class="mt-7 flex flex-wrap justify-center gap-3">
         <a href="https://wa.me/972544599524" class="brand-primary-button px-6 py-3 font-semibold">שלחי לי הודעה ב-WhatsApp</a>
         <a href="tel:+972544599524" class="brand-secondary-button px-6 py-3 font-semibold">התקשרי אליי</a>
       </div>
-      <div class="mt-7 text-sm text-[#776a60]">
-        <p>טיפולים בחדרה, בתיאום מראש</p>
+      <div class="mt-7 text-sm leading-7 text-[#776a60]">
+        <p>רחוב הלל יפה, מרכז העיר חדרה</p>
+        <p>קבלת לקוחות אחר הצהריים ובימי שישי, בתיאום מראש</p>
         <p class="mt-2">
           <a href="tel:+972544599524" class="font-semibold text-[#8b5f1f] underline decoration-[#d8bb7a] underline-offset-4">
             <span dir="ltr" class="inline-block">054-4599524</span>
@@ -159,8 +267,4 @@
     <p class="mt-5 text-xs text-[#a99c90]">האתר נוצר באהבה על ידי <a class="underline underline-offset-4" href="https://sensei.art" target="_blank" rel="noopener">sensei.art</a></p>
   </div>
 </footer>
-
-<div class="fixed bottom-4 left-4 right-4 z-40 md:hidden">
-  <a href="https://wa.me/972544599524" class="brand-primary-button block px-5 py-4 text-center font-bold shadow-lg">בואי נדבר</a>
-</div>
 {% endblock %}
