@@ -456,3 +456,45 @@ button {
   border-radius: 999px;
   opacity: 0.72;
 }
+
+
+.certificate-card {
+  overflow: hidden;
+  border: 1px solid var(--toma-line);
+  background: rgba(255, 250, 243, 0.88);
+  box-shadow: 0 16px 34px rgba(91, 64, 34, 0.06);
+}
+
+.certificate-preview {
+  display: flex;
+  min-height: 20rem;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+  background: rgba(241, 223, 200, 0.3);
+}
+
+.certificate-preview img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  max-height: 23rem;
+  height: auto;
+  border: 1px solid rgba(173, 123, 43, 0.22);
+  box-shadow: 0 9px 22px rgba(42, 36, 31, 0.11);
+}
+
+.certificate-preview:hover,
+.certificate-preview:focus-visible {
+  background: rgba(241, 223, 200, 0.56);
+}
+
+.certificate-preview:focus-visible {
+  outline: 2px solid var(--toma-gold-dark);
+  outline-offset: -3px;
+}
+
+.certificate-caption {
+  border-top: 1px solid var(--toma-line);
+  padding: 1.5rem;
+}
