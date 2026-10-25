@@ -446,22 +446,6 @@ button {
 }
 
 
-.whatsapp-icon {
-  display: inline-flex;
-  flex: 0 0 auto;
-  align-items: center;
-  justify-content: center;
-  width: 1.65rem;
-  height: 1.65rem;
-  border-radius: 50%;
-  background: #fffaf3;
-}
-
-.whatsapp-icon svg {
-  display: block;
-  width: 1.2rem;
-  height: 1.2rem;
-}
 
 
 .certificate-card {
