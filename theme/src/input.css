@@ -548,7 +548,8 @@ button {
 
 .certificate-link {
   display: grid;
-  grid-template-columns: clamp(4.75rem, 24vw, 7.5rem) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr) clamp(4.75rem, 24vw, 7.5rem);
+  grid-template-areas: "description scan";
   gap: clamp(0.75rem, 3vw, 1.25rem);
   align-items: center;
   height: 100%;
@@ -561,12 +562,17 @@ button {
 }
 
 .certificate-paper {
+  grid-area: scan;
   width: 100%;
   height: auto;
   padding: 0.2rem;
   border-radius: 0.15rem;
   background: white;
   box-shadow: 0 10px 24px -12px rgba(69, 45, 29, 0.36), 0 1px 3px rgba(69, 45, 29, 0.14);
+}
+
+.certificate-link > div {
+  grid-area: description;
 }
 
 .certificate-action {
@@ -612,6 +618,7 @@ button {
 
   .certificate-link {
     grid-template-columns: minmax(0, 1fr);
+    grid-template-areas: "scan" "description";
     grid-template-rows: auto 1fr;
     justify-items: center;
     align-items: start;
