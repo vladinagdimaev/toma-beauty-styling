@@ -367,9 +367,18 @@ button {
 }
 
 .price-card-featured {
+  display: grid;
+  gap: clamp(1rem, 3vw, 2rem);
+  align-items: center;
   background:
     radial-gradient(ellipse at 15% 0%, rgba(231, 164, 151, 0.2), transparent 65%),
     var(--toma-card-surface);
+}
+
+@media (min-width: 48rem) {
+  .price-card-featured {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
 }
 
 .price-card-heading {
@@ -416,7 +425,7 @@ button {
   line-height: 1.6;
 }
 
-.price-breakdown > div {
+.price-breakdown dl > div {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
   gap: 1rem;
