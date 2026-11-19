@@ -341,7 +341,9 @@ button {
 
 .pricing-section,
 .faq-section {
-  background: rgba(255, 250, 243, 0.42);
+  background:
+    radial-gradient(ellipse at 88% 32%, rgba(242, 205, 191, 0.23), transparent 50%),
+    var(--toma-ivory-soft);
 }
 
 .price-card {
