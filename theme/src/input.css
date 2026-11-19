@@ -3,6 +3,8 @@
 @source "../templates/**/*.html";
 
 :root {
+  --toma-card-surface: linear-gradient(145deg, #fffaf4, #f8ede1);
+  --toma-card-shadow: 0 6px 20px rgba(104, 71, 43, 0.06);
   --toma-radius-pill: 999px;
   --toma-radius-card: 1.25rem;
   --toma-radius-panel: 1.75rem;
@@ -156,8 +158,6 @@ button {
   align-items: center;
   gap: 0.75rem;
   padding: 1rem;
-  background: linear-gradient(145deg, #fffaf4, #f8ede1);
-  box-shadow: 0 6px 20px rgba(104, 71, 43, 0.06);
 }
 
 .trust-illustration {
@@ -180,6 +180,16 @@ button {
 .about-placeholder,
 .wire {
   border-radius: var(--toma-radius-card);
+}
+
+.trust-item,
+.service-card,
+.price-card,
+.certificate-card,
+.faq-item,
+.contact-panel {
+  background: var(--toma-card-surface);
+  box-shadow: var(--toma-card-shadow);
 }
 
 .contact-panel,
@@ -224,8 +234,6 @@ button {
 
 .service-card {
   overflow: hidden;
-  background: rgba(255, 250, 243, 0.78);
-  box-shadow: 0 16px 34px rgba(91, 64, 34, 0.07);
 }
 
 .service-card h3 {
@@ -258,15 +266,6 @@ button {
 
 .about-panel {
   padding: clamp(0.25rem, 1.5vw, 1rem);
-}
-
-.contact-panel {
-  position: relative;
-  border: 1px solid rgba(173, 123, 43, 0.62);
-  background:
-    radial-gradient(circle at 8% 0%, rgba(216, 187, 122, 0.16), transparent 15rem),
-    rgba(255, 250, 243, 0.9);
-  box-shadow: 0 22px 52px rgba(91, 64, 34, 0.09);
 }
 
 .brand-footer {
@@ -369,17 +368,27 @@ button {
 }
 
 .price-card {
-  border: 1px solid var(--toma-line);
-  background: rgba(255, 250, 243, 0.86);
   padding: 1.5rem;
-  box-shadow: 0 16px 34px rgba(91, 64, 34, 0.06);
 }
 
 .price-card-featured {
-  border-color: rgba(139, 95, 31, 0.58);
   background:
-    radial-gradient(circle at 100% 0%, rgba(216, 187, 122, 0.16), transparent 14rem),
-    rgba(255, 250, 243, 0.94);
+    radial-gradient(ellipse at 15% 0%, rgba(231, 164, 151, 0.2), transparent 65%),
+    var(--toma-card-surface);
+}
+
+.price-card-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.price-illustration {
+  flex: none;
+  inline-size: clamp(3.25rem, 6vw, 4.5rem);
+  aspect-ratio: 1;
+  object-fit: contain;
 }
 
 .price-main {
@@ -391,8 +400,7 @@ button {
 }
 
 .price-future {
-  border-top: 1px solid var(--toma-line);
-  padding-top: 1rem;
+  padding-top: 0.5rem;
   color: #5b5148;
   font-size: 0.9rem;
   line-height: 1.6;
@@ -410,11 +418,6 @@ button {
   border: 1px solid var(--toma-line);
   background: rgba(255, 250, 243, 0.78);
   padding: 1.25rem 1.35rem;
-}
-
-.faq-item {
-  border: 1px solid var(--toma-line);
-  background: rgba(255, 250, 243, 0.78);
 }
 
 .faq-item summary {
@@ -447,21 +450,15 @@ button {
 }
 
 .faq-item p {
-  border-top: 1px solid rgba(173, 123, 43, 0.24);
   margin: 0;
-  padding: 1rem 1.25rem 1.2rem;
+  padding: 0 3rem 1.2rem 1.25rem;
   color: var(--toma-muted);
   line-height: 1.8;
 }
 
 
-
-
 .certificate-card {
   overflow: hidden;
-  border: 1px solid var(--toma-line);
-  background: rgba(255, 250, 243, 0.88);
-  box-shadow: 0 16px 34px rgba(91, 64, 34, 0.06);
 }
 
 .certificate-preview {
@@ -470,7 +467,7 @@ button {
   align-items: center;
   justify-content: center;
   padding: 1.25rem;
-  background: rgba(241, 223, 200, 0.3);
+  background: radial-gradient(ellipse at center, rgba(232, 179, 158, 0.24), transparent 75%);
 }
 
 .certificate-preview img {
@@ -495,6 +492,5 @@ button {
 }
 
 .certificate-caption {
-  border-top: 1px solid var(--toma-line);
   padding: 1.5rem;
 }
