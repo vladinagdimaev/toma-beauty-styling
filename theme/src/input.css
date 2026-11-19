@@ -75,6 +75,10 @@ button {
 .brand-hero {
   position: relative;
   overflow: hidden;
+}
+
+.brand-hero,
+#about {
   background:
     radial-gradient(circle at 8% 16%, rgba(216, 187, 122, 0.16), transparent 20rem),
     linear-gradient(180deg, rgba(255, 250, 243, 0.72), rgba(248, 235, 219, 0.32));
