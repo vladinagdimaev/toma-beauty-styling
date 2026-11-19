@@ -145,8 +145,16 @@ button {
 }
 
 .trust-item {
-  position: relative;
-  padding: 1.25rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+}
+
+.trust-illustration {
+  flex: none;
+  width: clamp(3.5rem, 7vw, 4.5rem);
+  height: auto;
 }
 
 .trust-item strong {
