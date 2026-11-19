@@ -352,6 +352,7 @@ button {
 
 .price-card-compact {
   display: grid;
+  padding-block: clamp(0.625rem, 1.25vw, 0.875rem);
   grid-template-columns: auto minmax(0, 1fr) auto;
   gap: clamp(0.5rem, 2vw, 1rem);
   align-items: center;
