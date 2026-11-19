@@ -149,20 +149,18 @@
       </div>
 
       <div class="grid gap-5 md:grid-cols-2">
-        <div class="grid gap-5">
-          {% for title, illustration in [('הרמת ריסים', 'service-lash-lift'), ('הרמת גבות', 'service-brow-lamination')] %}
-            <article class="price-card price-card-compact">
-              <img class="price-illustration" src="{{ SITEURL }}/theme/images/{{ illustration }}.webp" alt="" width="72" height="72" loading="lazy" decoding="async">
-              <h3 class="section-heading font-bold">{{ title }}</h3>
-              <div class="price-amount">
-                <p class="price-main">150 ₪</p>
-                <p class="price-future">במקום 250 ₪</p>
-              </div>
-            </article>
-          {% endfor %}
-        </div>
+        {% for title, illustration in [('הרמת ריסים', 'service-lash-lift'), ('הרמת גבות', 'service-brow-lamination')] %}
+          <article class="price-card price-card-compact">
+            <img class="price-illustration" src="{{ SITEURL }}/theme/images/{{ illustration }}.webp" alt="" width="72" height="72" loading="lazy" decoding="async">
+            <h3 class="section-heading font-bold">{{ title }}</h3>
+            <div class="price-amount">
+              <p class="price-main">150 ₪</p>
+              <p class="price-future">במקום 250 ₪</p>
+            </div>
+          </article>
+        {% endfor %}
 
-        <article class="price-card price-card-featured">
+        <article class="price-card price-card-featured md:col-span-2">
           <div class="price-card-heading">
             <h3 class="section-heading text-lg font-bold">איפור קבוע לגבות או לשפתיים</h3>
             <img class="price-illustration" src="{{ SITEURL }}/theme/images/toma-hero-tools.webp" alt="" width="72" height="72" loading="lazy" decoding="async">
