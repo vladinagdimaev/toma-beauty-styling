@@ -219,7 +219,7 @@
              loading="lazy" decoding="async">
       </header>
 
-      <div class="grid gap-4 sm:grid-cols-2 sm:gap-5">
+      <div class="grid gap-6 sm:grid-cols-2 sm:gap-5">
         {% for slug, title, course in [
           ('powder-brows', 'מיקרופיגמנטציה לגבות', 'קורס בסיסי בשיטת הפודרה'),
           ('all-about-lips', 'איפור קבוע לשפתיים', 'All About Lips')
@@ -228,9 +228,11 @@
             <a class="certificate-link" href="{{ SITEURL }}/theme/certificates/{{ slug }}.pdf" target="_blank" rel="noopener">
               <img class="certificate-paper" src="{{ SITEURL }}/theme/images/certificate-{{ slug }}.avif"
                    alt="" width="720" height="1019" loading="lazy" decoding="async">
-              <div>
-                <h3 class="section-heading text-lg font-bold sm:text-xl">{{ title }}</h3>
-                <p class="mt-1 text-sm leading-6 text-[#6f6359]"><bdi>{{ course }}</bdi></p>
+              <div class="certificate-description">
+                <div>
+                  <h3 class="section-heading text-lg font-bold sm:text-xl">{{ title }}</h3>
+                  <p class="mt-1 text-sm leading-6 text-[#6f6359]"><bdi>{{ course }}</bdi></p>
+                </div>
                 <span class="certificate-action">
                   לצפייה בתעודה <bdi dir="ltr">(PDF)</bdi>
                   <span class="sr-only">נפתח בלשונית חדשה</span>
