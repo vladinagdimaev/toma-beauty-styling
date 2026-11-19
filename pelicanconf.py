@@ -1,6 +1,7 @@
 AUTHOR = 'Tamara Solomonov'
 SITENAME = 'ToMa Beauty by Tamara Solomonov'
 SITEURL = ''
+SOCIAL_SHARE_URL = 'https://tomafd.com'
 PATH = 'content'
 TIMEZONE = 'Asia/Jerusalem'
 DEFAULT_LANG = 'he'

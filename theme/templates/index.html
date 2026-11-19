@@ -1,5 +1,19 @@
 {% extends "base.html" %}
 {% block title %}ToMa Beauty by Tamara Solomonov | ריסים, גבות ואיפור קבוע בחדרה{% endblock %}
+{% block social_metadata %}
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="he_IL">
+  <meta property="og:site_name" content="ToMa Beauty">
+  <meta property="og:title" content="ToMa Beauty – ריסים, גבות ואיפור קבוע בחדרה">
+  <meta property="og:description" content="הרמת ריסים וגבות ומיקרופיגמנטציה בסטודיו של תמרה סולומונוב.">
+  <meta property="og:url" content="{{ SOCIAL_SHARE_URL }}/">
+  <meta property="og:image" content="{{ SOCIAL_SHARE_URL }}/theme/images/toma-social-v1.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="איור כלי איפור קבוע, הרמת ריסים והרמת גבות">
+  <meta name="twitter:card" content="summary_large_image">
+{% endblock %}
 {% block content %}
 <header class="brand-header sticky top-0 z-50 border-b backdrop-blur">
   <div class="mx-auto flex max-w-6xl items-center justify-between gap-5 px-4 py-2.5">
