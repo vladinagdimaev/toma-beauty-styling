@@ -177,8 +177,6 @@ button {
 .trust-item,
 .service-card,
 .price-card,
-.training-card,
-.certificate-card,
 .faq-item,
 .gallery-placeholder,
 .about-placeholder,
@@ -189,7 +187,6 @@ button {
 .trust-item,
 .service-card,
 .price-card,
-.certificate-card,
 .faq-item,
 .contact-panel {
   background: var(--toma-card-surface);
@@ -343,7 +340,6 @@ button {
 }
 
 .pricing-section,
-.training-section,
 .faq-section {
   background: rgba(255, 250, 243, 0.42);
 }
@@ -395,12 +391,6 @@ button {
   line-height: 1.6;
 }
 
-.training-card {
-  border: 1px solid var(--toma-line);
-  background: rgba(255, 250, 243, 0.78);
-  padding: 1.25rem 1.35rem;
-}
-
 .faq-item summary {
   border-radius: inherit;
   position: relative;
@@ -438,40 +428,127 @@ button {
 }
 
 
-.certificate-card {
-  overflow: hidden;
+.training-section {
+  background:
+    radial-gradient(ellipse at 94% 45%, rgba(242, 205, 191, 0.23), transparent 48%),
+    var(--toma-ivory-soft);
 }
 
-.certificate-preview {
-  display: flex;
-  min-height: 20rem;
+.training-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) clamp(5.5rem, 23vw, 8rem);
+  grid-template-areas: "title art" "intro intro";
+  gap: 0.75rem 1.25rem;
   align-items: center;
-  justify-content: center;
-  padding: 1.25rem;
-  background: radial-gradient(ellipse at center, rgba(232, 179, 158, 0.24), transparent 75%);
 }
 
-.certificate-preview img {
-  display: block;
-  width: auto;
-  max-width: 100%;
-  max-height: 23rem;
+.training-intro h2 {
+  grid-area: title;
+}
+
+.training-intro p {
+  grid-area: intro;
+  color: var(--toma-muted);
+  line-height: 1.85;
+}
+
+.training-intro img {
+  grid-area: art;
+  width: 100%;
   height: auto;
+}
+
+.certificate-gallery {
+  padding: clamp(1.25rem, 3.4vw, 2.5rem);
+  border-radius: var(--toma-radius-panel);
+  background:
+    radial-gradient(ellipse at 5% 0%, rgba(229, 173, 154, 0.2), transparent 65%),
+    var(--toma-card-surface);
+  box-shadow: var(--toma-card-shadow);
+}
+
+.certificate-link {
+  display: grid;
+  grid-template-columns: clamp(4.75rem, 24vw, 7.5rem) minmax(0, 1fr);
+  gap: clamp(0.75rem, 3vw, 1.25rem);
+  align-items: center;
+  height: 100%;
   border-radius: 0.5rem;
-  border: 1px solid rgba(173, 123, 43, 0.22);
-  box-shadow: 0 9px 22px rgba(42, 36, 31, 0.11);
 }
 
-.certificate-preview:hover,
-.certificate-preview:focus-visible {
-  background: rgba(241, 223, 200, 0.56);
+.certificate-paper {
+  width: 100%;
+  height: auto;
+  padding: 0.2rem;
+  border-radius: 0.15rem;
+  background: white;
+  box-shadow: 0 10px 24px -12px rgba(69, 45, 29, 0.36), 0 1px 3px rgba(69, 45, 29, 0.14);
 }
 
-.certificate-preview:focus-visible {
+.certificate-action {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.3em;
+  margin-block-start: 0.75rem;
+  padding: 0.35rem 0.625rem;
+  border-radius: var(--toma-radius-pill);
+  background: rgba(173, 123, 43, 0.08);
+  color: var(--toma-gold-dark);
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.certificate-link:focus-visible {
   outline: 2px solid var(--toma-gold-dark);
-  outline-offset: -3px;
+  outline-offset: 5px;
 }
 
-.certificate-caption {
-  padding: 1.5rem;
+.certificate-link:hover .certificate-action,
+.certificate-link:focus-visible .certificate-action {
+  background: rgba(173, 123, 43, 0.14);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+@media (min-width: 40rem) {
+  .training-intro {
+    grid-template-columns: minmax(0, 1fr) min(24%, 13rem);
+    grid-template-areas: "title art" "intro art";
+    column-gap: 2.5rem;
+  }
+
+  .training-intro h2 {
+    align-self: end;
+  }
+
+  .training-intro p {
+    align-self: start;
+    max-width: 45ch;
+  }
+
+  .certificate-link {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto 1fr;
+    justify-items: center;
+    align-items: start;
+    text-align: center;
+  }
+
+  .certificate-paper {
+    max-width: 13rem;
+  }
+}
+
+@media (min-width: 64rem) {
+  .training-intro {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas: "title" "intro" "art";
+    row-gap: 1rem;
+  }
+
+  .training-intro img {
+    max-width: 16rem;
+    margin-inline: auto;
+    margin-block-start: 0.5rem;
+  }
 }

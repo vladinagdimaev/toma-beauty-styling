@@ -212,42 +212,36 @@
     </div>
   </section>
 
-  <section id="training" class="training-section">
-    <div class="mx-auto max-w-5xl px-4 py-16 md:py-20">
-      <div class="mx-auto mb-9 max-w-2xl text-center">
-        <p class="section-kicker mb-2">הכשרות</p>
-        <h2 class="section-heading text-3xl font-bold md:text-4xl">הכשרות ותעודות</h2>
-        <p class="mt-4 leading-7 text-[#776a60]">תמרה עברה הכשרות בתחומי הריסים, הגבות והמיקרופיגמנטציה. כאן אפשר להכיר שתיים מההכשרות שלה באקדמיה של ענת ליפקין.</p>
-      </div>
+  <section id="training" class="training-section" aria-labelledby="training-title">
+    <div class="mx-auto grid max-w-6xl items-center gap-8 px-4 py-16 md:py-20 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.95fr)] lg:gap-12">
+      <header class="training-intro">
+        <h2 id="training-title" class="section-heading text-3xl font-bold md:text-4xl">הכשרות ותעודות</h2>
+        <p>תמרה למדה איפור קבוע לגבות ולשפתיים באקדמיה של ענת ליפקין. היא עברה גם הכשרות בהרמת ריסים ובהרמת גבות.</p>
+        <img src="{{ SITEURL }}/theme/images/training-workbook.webp" alt="" width="720" height="576"
+             loading="lazy" decoding="async">
+      </header>
 
-      <div class="certificate-grid grid gap-5 sm:grid-cols-2">
-        <figure class="certificate-card">
-          <a class="certificate-preview" href="{{ SITEURL }}/theme/images/certificate-powder-brows.avif" target="_blank" rel="noopener" aria-label="פתיחת תעודת קורס מיקרופיגמנטציה לגבות בשיטת הפודרה">
-            <img src="{{ SITEURL }}/theme/images/certificate-powder-brows.avif"
-                 alt="תעודת Tamara Solomonov מטעם Anat Lipkin, קורס בסיסי במיקרופיגמנטציה בשיטת הפודרה"
-                 width="350" height="495" loading="lazy" decoding="async">
-          </a>
-          <figcaption class="certificate-caption">
-            <h3 class="text-xl font-bold">מיקרופיגמנטציה לגבות</h3>
-            <p class="mt-2 leading-7 text-[#776a60]">קורס בסיסי בשיטת הפודרה, אצל ענת ליפקין.</p>
-            <p class="mt-3 text-sm font-semibold text-[#8b5f1f]">צפייה בתעודה</p>
-          </figcaption>
-        </figure>
-
-        <figure class="certificate-card">
-          <a class="certificate-preview" href="{{ SITEURL }}/theme/images/certificate-all-about-lips.avif" target="_blank" rel="noopener" aria-label="פתיחת תעודת קורס All About Lips">
-            <img src="{{ SITEURL }}/theme/images/certificate-all-about-lips.avif"
-                 alt="תעודת Tamara Solomonov מטעם Anat Lipkin Academy, קורס All About Lips"
-                 width="350" height="495" loading="lazy" decoding="async">
-          </a>
-          <figcaption class="certificate-caption">
-            <h3 class="text-xl font-bold">איפור קבוע לשפתיים</h3>
-            <p class="mt-2 leading-7 text-[#776a60]">הכשרת All About Lips באקדמיה של ענת ליפקין.</p>
-            <p class="mt-3 text-sm font-semibold text-[#8b5f1f]">צפייה בתעודה</p>
-          </figcaption>
-        </figure>
+      <div class="certificate-gallery grid gap-7 sm:grid-cols-2 sm:gap-5">
+        {% for slug, title, course in [
+          ('powder-brows', 'מיקרופיגמנטציה לגבות', 'קורס בסיסי בשיטת הפודרה'),
+          ('all-about-lips', 'איפור קבוע לשפתיים', 'All About Lips')
+        ] %}
+          <article>
+            <a class="certificate-link" href="{{ SITEURL }}/theme/certificates/{{ slug }}.pdf" target="_blank" rel="noopener">
+              <img class="certificate-paper" src="{{ SITEURL }}/theme/images/certificate-{{ slug }}.avif"
+                   alt="" width="720" height="1019" loading="lazy" decoding="async">
+              <div>
+                <h3 class="section-heading text-lg font-bold sm:text-xl">{{ title }}</h3>
+                <p class="mt-1 text-sm leading-6 text-[#6f6359]"><bdi>{{ course }}</bdi></p>
+                <span class="certificate-action">
+                  לצפייה בתעודה <bdi dir="ltr">(PDF)</bdi>
+                  <span class="sr-only">נפתח בלשונית חדשה</span>
+                </span>
+              </div>
+            </a>
+          </article>
+        {% endfor %}
       </div>
-      <p class="mx-auto mt-8 max-w-2xl text-center text-sm leading-7 text-[#776a60]">תמרה עברה גם הכשרות בהרמת ריסים ובהרמת גבות.</p>
     </div>
   </section>
 
