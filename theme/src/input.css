@@ -576,7 +576,7 @@ button {
 
 @media (width < 40rem) {
   .certificate-link {
-    padding: 0;
+    padding: 1rem;
     background: none;
     box-shadow: none;
   }
