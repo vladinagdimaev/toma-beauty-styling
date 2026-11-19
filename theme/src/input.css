@@ -220,11 +220,13 @@ button {
 .trust-item,
 .service-card,
 .price-card,
-.faq-item {
+.faq-item,
+.contact-panel {
   background: var(--toma-card-surface);
   box-shadow: var(--toma-card-shadow);
 }
 
+.contact-panel,
 .legal-content {
   border-radius: var(--toma-radius-panel);
 }
@@ -282,16 +284,6 @@ button {
   color: var(--toma-muted);
 }
 
-.contact-closing {
-  background:
-    radial-gradient(ellipse at 10% 24%, rgba(231, 164, 151, 0.2), transparent 55%),
-    var(--toma-card-surface);
-}
-
-.contact-footer {
-  color: var(--toma-muted);
-}
-
 .brand-footer-panel {
   border-radius: var(--toma-radius-panel);
   background:
@@ -310,10 +302,14 @@ button {
   font-weight: 600;
 }
 
+@media (width < 40rem) {
+  .home-footer-grid .brand-footer-nav a {
+    padding-inline: 0.45rem;
+  }
+}
+
 .brand-footer a:hover,
-.brand-footer a:focus-visible,
-.contact-footer a:hover,
-.contact-footer a:focus-visible {
+.brand-footer a:focus-visible {
   color: var(--toma-ink);
   text-decoration: underline;
   text-underline-offset: 0.2em;
