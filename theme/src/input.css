@@ -48,9 +48,9 @@ button {
 }
 
 .brand-header {
-  border-color: var(--toma-line);
-  background: rgba(249, 235, 219, 0.96);
-  box-shadow: 0 8px 30px rgba(74, 55, 34, 0.04);
+  border-color: rgba(173, 123, 43, 0.16);
+  background: linear-gradient(100deg, rgba(250, 233, 225, 0.96), rgba(255, 250, 244, 0.96) 56%);
+  box-shadow: 0 8px 24px rgba(91, 64, 34, 0.05);
 }
 
 .brand-logo {
@@ -61,7 +61,9 @@ button {
 }
 
 .brand-nav a {
-  color: #463d35;
+  padding: 0.45rem 0.8rem;
+  border-radius: var(--toma-radius-pill);
+  color: var(--toma-ink);
   font-size: 0.98rem;
   font-weight: 600;
   letter-spacing: 0.01em;
@@ -69,6 +71,7 @@ button {
 
 .brand-nav a:hover,
 .brand-nav a:focus-visible {
+  background: rgba(230, 175, 153, 0.17);
   color: var(--toma-gold-dark);
 }
 
@@ -247,14 +250,33 @@ button {
 }
 
 .brand-footer {
-  border-top: 1px solid rgba(216, 187, 122, 0.35);
-  background: #2d2925;
-  color: #e8dccd;
+  padding: 0.75rem 1rem 1.5rem;
+  color: var(--toma-muted);
+}
+
+.brand-footer-panel {
+  border-radius: var(--toma-radius-panel);
+  background:
+    radial-gradient(ellipse at 95% 5%, rgba(231, 164, 151, 0.2), transparent 60%),
+    var(--toma-card-surface);
+  box-shadow: var(--toma-card-shadow);
+  padding: clamp(1.25rem, 3vw, 2rem);
+}
+
+.brand-footer-nav a {
+  display: inline-block;
+  padding: 0.45rem 0.8rem;
+  border-radius: var(--toma-radius-pill);
+  background: rgba(255, 250, 244, 0.72);
+  color: var(--toma-gold-dark);
+  font-weight: 600;
 }
 
 .brand-footer a:hover,
 .brand-footer a:focus-visible {
-  color: #e3c88f;
+  color: var(--toma-ink);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
 }
 
 .wire {
