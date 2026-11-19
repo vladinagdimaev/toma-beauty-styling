@@ -130,14 +130,14 @@ button {
   align-items: center;
   gap: 0.5rem;
   color: var(--toma-muted);
-  font-size: 0.875rem;
+  font-size: 0.9375rem;
   font-weight: 500;
 }
 
 .hero-location::before {
   flex: none;
-  width: 0.75rem;
-  height: 0.75rem;
+  width: 0.875rem;
+  height: 0.875rem;
   border: 1px solid var(--toma-gold-dark);
   border-radius: 50% 50% 50% 0;
   background: radial-gradient(circle, var(--toma-gold-dark) 1px, transparent 1.5px);
