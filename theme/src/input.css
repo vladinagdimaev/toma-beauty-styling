@@ -366,29 +366,14 @@ button {
 
 
 .brand-wordmark {
-  display: inline-flex;
-  align-items: baseline;
-  gap: 0.35rem;
-  color: var(--toma-gold-dark);
-  direction: ltr;
-  unicode-bidi: isolate;
-  line-height: 1;
-  text-decoration: none;
+  display: block;
+  width: clamp(7.5rem, 17vw, 8.5rem);
 }
 
-.brand-wordmark-main {
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 1.9rem;
-  letter-spacing: -0.04em;
+.brand-wordmark img {
+  width: 100%;
+  height: auto;
 }
-
-.brand-wordmark-sub {
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 1.05rem;
-  font-style: italic;
-  letter-spacing: 0.02em;
-}
-
 
 [id] {
   scroll-margin-top: 5rem;
