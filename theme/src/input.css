@@ -505,7 +505,7 @@ button {
 
 .training-intro {
   display: grid;
-  grid-template-areas: "title" "art" "intro";
+  grid-template-areas: "title" "intro" "art";
   gap: 1rem;
   align-items: center;
 }
