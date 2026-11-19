@@ -209,29 +209,6 @@ button {
   letter-spacing: -0.018em;
 }
 
-.brand-rule {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  width: min(15rem, 62vw);
-  margin-top: 1.35rem;
-}
-
-.brand-rule::before,
-.brand-rule::after {
-  height: 1px;
-  flex: 1;
-  background: var(--toma-line);
-  content: "";
-}
-
-.brand-rule span {
-  width: 0.46rem;
-  height: 0.46rem;
-  background: var(--toma-gold);
-  border-radius: 50%;
-}
-
 .service-card {
   overflow: hidden;
 }
