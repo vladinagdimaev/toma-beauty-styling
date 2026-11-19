@@ -106,15 +106,9 @@ button {
   letter-spacing: -0.025em;
 }
 
-.brand-image-frame {
-  border: 1px solid var(--toma-line);
-  background: rgba(255, 250, 243, 0.86);
-  padding: 0.55rem;
-  box-shadow: 0 24px 60px rgba(97, 69, 37, 0.12);
-}
-
 .brand-image-frame img {
   display: block;
+  object-fit: contain;
 }
 
 .brand-primary-button {
