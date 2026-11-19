@@ -148,7 +148,7 @@ button {
   gap: 0.75rem;
   padding: 1rem;
   border-radius: 1.25rem;
-  background-color: #faf0e5;
+  background: linear-gradient(145deg, #fffaf4, #f8ede1);
   box-shadow: 0 6px 20px rgba(104, 71, 43, 0.06);
 }
 
