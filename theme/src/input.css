@@ -3,6 +3,9 @@
 @source "../templates/**/*.html";
 
 :root {
+  --toma-radius-pill: 999px;
+  --toma-radius-card: 1.25rem;
+  --toma-radius-panel: 1.75rem;
   --toma-ivory: #f8ebdb;
   --toma-ivory-soft: #fffaf3;
   --toma-ivory-deep: #f1dfc8;
@@ -81,6 +84,12 @@ button {
   z-index: 1;
 }
 
+.brand-kicker,
+.brand-primary-button,
+.brand-secondary-button {
+  border-radius: var(--toma-radius-pill);
+}
+
 .brand-kicker {
   display: inline-flex;
   align-items: center;
@@ -98,7 +107,7 @@ button {
   height: 0.38rem;
   background: var(--toma-gold);
   content: "";
-  transform: rotate(45deg);
+  border-radius: 50%;
 }
 
 .brand-title {
@@ -147,7 +156,6 @@ button {
   align-items: center;
   gap: 0.75rem;
   padding: 1rem;
-  border-radius: 1.25rem;
   background: linear-gradient(145deg, #fffaf4, #f8ede1);
   box-shadow: 0 6px 20px rgba(104, 71, 43, 0.06);
 }
@@ -162,8 +170,21 @@ button {
   color: var(--toma-gold-dark);
 }
 
-.section-shell {
-  border-color: var(--toma-line);
+.trust-item,
+.service-card,
+.price-card,
+.training-card,
+.certificate-card,
+.faq-item,
+.gallery-placeholder,
+.about-placeholder,
+.wire {
+  border-radius: var(--toma-radius-card);
+}
+
+.contact-panel,
+.legal-content {
+  border-radius: var(--toma-radius-panel);
 }
 
 .section-kicker {
@@ -198,7 +219,7 @@ button {
   width: 0.46rem;
   height: 0.46rem;
   background: var(--toma-gold);
-  transform: rotate(45deg);
+  border-radius: 50%;
 }
 
 .service-card {
@@ -232,7 +253,7 @@ button {
   margin: 0 auto 0.8rem;
   background: var(--toma-gold);
   content: "";
-  transform: rotate(45deg);
+  border-radius: 50%;
 }
 
 .about-panel {
@@ -397,6 +418,7 @@ button {
 }
 
 .faq-item summary {
+  border-radius: inherit;
   position: relative;
   cursor: pointer;
   padding: 1.1rem 3rem 1.1rem 1.25rem;
@@ -457,6 +479,7 @@ button {
   max-width: 100%;
   max-height: 23rem;
   height: auto;
+  border-radius: 0.5rem;
   border: 1px solid rgba(173, 123, 43, 0.22);
   box-shadow: 0 9px 22px rgba(42, 36, 31, 0.11);
 }
